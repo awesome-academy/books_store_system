@@ -15,5 +15,5 @@ class User < ApplicationRecord
   validates :address, presence: true,
     length: {maximum: Settings.maximum_length_address}
   validates :phone, presence: true,
-    ength: {maximum: Settings.maximum_length_phone}
+    length: {maximum: Settings.maximum_length_phone}
 end

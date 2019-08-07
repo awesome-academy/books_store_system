@@ -1,2 +1,21 @@
 en:
-  book_store: Book Store
+  layouts:
+    header:
+      tim: Search
+      login: Log in
+      category: Categories
+      cart: Cart
+    footer:
+      help: Help
+      hotline: Hotline
+      about: About
+      recruitment: Recruitment
+      account: Account
+      notifi: Notification
+      guide: Guide
+      shopping_guide: Shopping guide
+      transportation_method: Transportation method
+      payment_method: Payment_method
+  static_pages:
+    home:
+      homepage: Book store online
