@@ -9,6 +9,6 @@ class Product < ApplicationRecord
   validates :author_name, presence: true,
     length: {maximum: Settings.maximum_length_name}
   validates :price, presence: true
-  validates :exist, presence: true
+  validates :num_exist, presence: true
   validates :description, presence: true
 end
