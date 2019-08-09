@@ -1,3 +1,4 @@
+<% provide :title, t(".title") %>
 <div class="">
   <%= form_for @category, url: admin_categories_path do |f| %>
     <%= render "shared/error_messages", object: f.object %>

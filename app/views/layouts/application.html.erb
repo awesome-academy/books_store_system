@@ -9,6 +9,10 @@
       "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application",
       "data-turbolinks-track": "reload" %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
   </head>
 
   <body>
@@ -18,7 +22,7 @@
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
       <%= yield %>
-      <%= render "layouts/footer" %>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>

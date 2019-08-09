@@ -1,5 +1,5 @@
 <% @list_review.each do |review| %>
-<div class="wrap-comment">
+<div class="wrap-comment" id="comment_id">
   <span class="user"><%= review.user.name %></span>
   <span class="rated">
     <% review.rate.to_i.times do %>

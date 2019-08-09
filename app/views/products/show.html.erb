@@ -1,5 +1,4 @@
 <% provide :title, @product.title %>
-<div class="clear"></div>
 <section class="main-detail">
   <div class="container">
     <div class="row">
@@ -9,9 +8,9 @@
             <%= link_to t(".home"), root_url %>
           </li>
           <% if parent_cate(@product.category_id).present? %>
-            <li><%= link_to parent_cate(@product.category_id).name, "#" %></li>
+            <li><%= link_to parent_cate(@product.category_id).name, parent_cate(@product.category_id) %></li>
           <% end %>
-          <li><%= link_to @product.category.name, "#" %></li>
+          <li><%= link_to @product.category.name, @product.category %></li>
           <li><%= @product.title %></li>
         </ul>
       </div> <!-- het pathway -->
@@ -32,16 +31,16 @@
             </div> <!-- het viewfield -->
             <div class="prices-container">
               <div class="price">
-                <%= number_to_currency(@product.price, unit: t(".vnd"), format: "%n %u")%>
+                <%= number_to_currency @product.price, locale: params[:locale] %>
               </div>
               <div class="goshop">
                 <% if @product.num_exist.zero? %>
-                  <div class="outstock"><% t ".out_stock" %></div>
+                  <div class="outstock"><%= t ".out_stock" %></div>
                 <% else %>
                   <%= form_with url: carts_path  do |f| %>
-                    <%= f.number_field :quantity, value: 1, class: "number_custom" %>
+                    <%= f.number_field :quantity, value: 1, class: "number_custom",
+                      min: Settings.quantity_min, max: @product.num_exist %>
                     <%= f.hidden_field :id, value: @product.id %>
-                    <%= f.hidden_field :num_exist, value: @product.num_exist %>
                     <%= f.submit t(".add_to_cart"), class: "submit-btn btn" %>
                   <% end %>
                 <% end %>
@@ -51,7 +50,10 @@
               <p><i class=" fa fa-check"></i><span><%= t ".free_plastic" %></span></p>
               <p><i class=" fa fa-check"></i><span><%= t ".free_ship" %></span></p>
               <p><i class=" fa fa-check"></i><span><%= t ".free_ship2" %></span></p>
-              <label for="review_content"><%= t(".review") %></label>
+              <p><%= @reviews.size %><%= t ".rate" %></p>
+              <% if @reviews.size.positive? %>
+                <p><%= t ".average" %><%= average_star %> <i class="fa fa-star active"></i></p>
+              <% end %>
             </div> <!-- het intro -->
           </div> <!-- het produce-infor -->
         </div> <!-- het right -->
@@ -75,8 +77,10 @@
     <% if logged_in? %>
       <%= render "form_review" %>
     <% end %>
-    <% if @list_review %>
-      <%= render "list_review" %>
-    <% end %>
+    <div id="comment_id">
+      <% if @reviews %>
+        <%= render @reviews %>
+      <% end %>
+    </div>
   </div> <!-- het container -->
 </section>

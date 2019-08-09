@@ -9,10 +9,13 @@
             <% end %>
           </div> <!-- het logo -->
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="search-form">
+          <form>
             <input type="text" name="seach" id="search" class="form-control timkiem">
             <span class="search"><%= t ".tim" %></span>
-            <ul class="list-group" id="result"></ul>
+          </form>
+          <div class="list-group d_none" id="show-search-product">
+          </div>
         </div> <!-- het input -->
         <div class="col-md-3">
           <div class="login">
@@ -21,7 +24,7 @@
                 <%= current_user.name %>
                 <ul class="drop_user">
                   <li><%= link_to t(".profile"), current_user %></li>
-                  <li><%= link_to t(".my_order"), "#" %></li>
+                  <li><%= link_to t(".my_order"), orders_path %></li>
                   <li class="divider"></li>
                   <li>
                     <%= link_to t(".logout"), logout_path, method: :delete %>

@@ -4,23 +4,18 @@
     <td><%= product.id %></td>
     <td><%= image_tag product.picture.url %></td>
     <td><%= product.title %></td>
-    <td><%=  number_to_currency(product.price, unit: t(".vnd"), format: "%n %u") %></td>
-    <td>
-      <%= form_with url: carts_path do |f| %>
-        <%= f.hidden_field :id, value: product.id %>
-        <%= f.number_field :quantity, value: val, class: "number_custom" %>
-        <%= f.hidden_field :num_exist, value: product.num_exist %>
-        <%= f.button do %>
-          <i class="fas fa-redo"></i>
-        <% end %>
-      <% end %>
-      <%= link_to cart_path(id: product.id), method: :delete, data: {confirm: t(".you_sure")} do %>
-        <button><i class="fas fa-trash"></i></button>
-      <% end %>
+    <td class="price"><%= product.price %></td>
+    <td class="num">
+      <input value="<%= val %>" class="number_custom1" type="number" name="quantity" id="quantity"
+        min="<%= Settings.quantity_min %>" max=<%= product.num_exist %>>
     </td>
-    <td>
-      <%= number_to_currency(total_price(product.price, val),
-        unit: t(".vnd"), format: "%n %u")%>
+    <td class="total">
+      <%= total_price(product.price, val) %>
+    </td>
+    <td  >
+      <%= link_to cart_path(id: product.id), method: :delete, data: {confirm: t(".you_sure")}, remote: true,class: "cart_delete" do %>
+        <button ><i class="far fa-trash-alt"></i></button>
+      <% end %>
     </td>
   </tr>
 <% end %>

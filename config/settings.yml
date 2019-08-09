@@ -11,3 +11,7 @@ file_accept: image/jpeg, image/gif, image/png
 scroll: 30
 stars_number_rate: 5
 rate: [1,2,3,4,5]
+quantity_min: 1
+paginate: 15
+round_helper: 1
+scroll: 30

@@ -7,6 +7,7 @@ en:
         parent: Category's parent
         create: Create
         no_parent: No parent
+        title: Add new category
     products:
       new:
         title: Title
@@ -18,6 +19,19 @@ en:
         num_exist: Number of product
         description: Description
         create: Create
+        title: Add new a book
+  orders:
+    index:
+      history: History orders
+      time: Time
+      status: Status
+      receiver: Receiver
+      mount: Mount
+      address: Address
+      action: Action
+      no_order: No order
+    order:
+      details: Details
   layouts:
     header:
       tim: Search
@@ -38,6 +52,12 @@ en:
       shopping_guide: Shopping guide
       transportation_method: Transportation method
       payment_method: Payment_method
+    top_product:
+      seeall: See all
+      top_sale: Top Book Sale
+    newproduct:
+      seeall: See all
+      new_book: New Book
   shared:
     error_messages:
       errors_count:
@@ -98,6 +118,7 @@ en:
       vnd: $
       total_price: Total price
       login_to: Login to order
+      action: Action
     list_cart:
       vnd: $
       you_sure: You sure ?
@@ -107,6 +128,20 @@ en:
       phone: Phone
       address: Address
       confirm: Confirm
+  categories:
+    show:
+      home: Home
+  newproducts:
+    index:
+      newbook: New Books
+      home: Home
+  topsales:
+    index:
+      topsale: Top sale
+      home: Home
+  newproduct:
+    index:
+      new_book: Sách mới
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
@@ -124,3 +159,4 @@ en:
   order_success: Order success !
   order_failse: Order failse !
   cart_empty: Cart is empty !
+  not_found_cate: Not found category

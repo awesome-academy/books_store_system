@@ -11,8 +11,19 @@ class Product < ApplicationRecord
     length: {maximum: Settings.maximum_length_name}
   validates :author_name, presence: true,
     length: {maximum: Settings.maximum_length_name}
+
   validates :price, presence: true
   validates :num_exist, presence: true
   validates :description, presence: true
   validates :picture, presence: true
+
+  scope :create_desc, ->{order(created_at: :desc).limit(Settings.paginate)}
+  scope :by_category, (lambda do |id|
+    where(category_id: id).or(where(category_id: Category.childs_category(id)))
+  end)
+  scope :top_sale, (lambda do
+    joins(:order_products).group(:product_id)
+    .order("count(order_products.id) DESC").limit(Settings.paginate)
+  end)
+  scope :search, ->(search){where "title like ?", "%#{search}%"}
 end
