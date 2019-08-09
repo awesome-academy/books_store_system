@@ -7,6 +7,17 @@ vi:
         parent: Danh mục cha
         create: Tạo danh mục
         no_parent: Là danh mục gốc
+    products:
+      new:
+        title: Tên sách
+        placeholder: Nhập tên sách
+        category: Danh mục
+        publisher_name: Nhà phát hành
+        author_name: Tác giả
+        price: Giá
+        num_exist: Số lượng
+        description: Mô tả
+        create: Thêm sách
   layouts:
     header:
       tim: Tìm
@@ -62,3 +73,5 @@ vi:
   invalid: Email hoặc mật khẩu không đúng
   category_created: Tạo danh mục thành công!
   create_failse: Tạo danh mục thất bại !
+  create_success: Thêm thành công !
+  create_product_failse: Thêm sản phẩm thất bại !
