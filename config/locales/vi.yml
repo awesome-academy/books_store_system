@@ -5,6 +5,9 @@ vi:
       login: Đăng nhập
       category: DANH MỤC SẢN PHẨM
       cart: Giỏ hàng
+      profile: Thông tin tài khoản
+      my_order: Lịch sử đơn hàng
+      logout: Đăng xuất
     footer:
       help: Hỗ trợ khách hàng
       hotline: Hotline
@@ -24,6 +27,14 @@ vi:
   static_pages:
     home:
       homepage: Website mua sách online được yêu thích nhất
+  sessions:
+    new:
+      login: Đăng nhập
+      email: Email
+      pass: Mật khẩu
+      new: Đăng ký
+      signup: Đăng ký ngay
+      login: Đăng nhập
   users:
     form:
       name: Tên
@@ -36,5 +47,8 @@ vi:
     new:
       sign: Đăng ký
       create: Tạo tài khoản
+    show:
+      logout: Đăng xuất
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
+  invalid: Email hoặc mật khẩu không đúng
