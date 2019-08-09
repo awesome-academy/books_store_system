@@ -16,9 +16,23 @@
         </div> <!-- het input -->
         <div class="col-md-3">
           <div class="login">
-            <%= link_to "#" do %>
-              <i class="fa fa-user"></i>
-              <span><%= t ".login" %></span>
+            <% if logged_in? %>
+              <div class="user_name">
+                <%= current_user.name %>
+                <ul class="drop_user">
+                  <li><%= link_to t(".profile"), current_user %></li>
+                  <li><%= link_to t(".my_order"), "#" %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to t(".logout"), logout_path, method: :delete %>
+                  </li>
+                </ul>
+              </div>
+            <% else %>
+              <%= link_to login_path do %>
+                <i class="fa fa-user"></i>
+                <span><%= t ".login" %></span>
+              <% end %>
             <% end %>
           </div>
           <div class="cart_big">

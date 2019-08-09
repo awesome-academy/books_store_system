@@ -5,6 +5,9 @@ en:
       login: Log in
       category: Categories
       cart: Cart
+      profile: My Profile
+      my_order: My order
+      logout: Logout
     footer:
       help: Help
       hotline: Hotline
@@ -24,6 +27,14 @@ en:
   static_pages:
     home:
       homepage: Book store online
+  sessions:
+    new:
+      login: Log in
+      email: Email
+      pass: Password
+      new: New user
+      signup: Sign up now!
+      login: Log in
   users:
     form:
       name: Name
@@ -36,5 +47,8 @@ en:
     new:
       sign: Sign up
       create: Create account
+    show:
+      logout: Logout
   signup_suc: Account was create!
   danger: Signup failse
+  invalid: Invalid email/password combination
