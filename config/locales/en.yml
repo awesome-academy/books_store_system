@@ -1,4 +1,12 @@
 en:
+  admin:
+    categories:
+      new:
+        name: Name
+        placeholder: Category's name
+        parent: Category's parent
+        create: Create
+        no_parent: No parent
   layouts:
     header:
       tim: Search
@@ -52,3 +60,5 @@ en:
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
+  category_created: Category_create!
+  create_failse: Create failse !

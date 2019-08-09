@@ -1,0 +1,20 @@
+<div class="">
+  <%= form_for @category, url: admin_categories_path do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <div class="field">
+      <%= f.label t(".name") %>
+      <%= f.text_field :name, placeholder: t(".placeholder"),
+        class: "form-control form_custom" %>
+    </div>
+    <div class="field">
+      <%= f.label t(".parent") %>
+      <%= f.select :parent_id, options_for_select(parent_category),
+        {prompt: t(".no_parent")}, class:"form-control form_custom" %>
+    </div>
+    <div class="field">
+      <%= f.file_field :picture, accept: Settings.file_accept %>
+    </div>
+    <%= f.submit t(".create"), class: "btn btn-primary btn_custom" %>
+  <% end %>
+</div>
+
