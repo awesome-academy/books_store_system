@@ -2,8 +2,8 @@ class CategoriesController < ApplicationController
   before_action :load_category, only: :show
 
   def show
-    @products = Product.by_category(@category).
-      page(params[:page]).per Settings.paginate
+    @products = Product.by_category(@category)
+                       .page(params[:page]).per Settings.paginate
   end
 
   private

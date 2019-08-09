@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   before_action :total_cart, only: :index
   before_action :set_cart, only: :create
-  before_action :load_item, only: :destroy
+  before_action :load_item, only: %i(update destroy)
 
   def index
     @order = current_user.orders.build if logged_in?
@@ -37,7 +37,8 @@ class CartsController < ApplicationController
   end
 
   def load_item
-    return if session[:cart].include? params[:id]
+    id = params[:product_id] ? params[:product_id] : params[:id]
+    return if session[:cart].include? id
     flash[:danger] = t "not_found_product"
     redirect_to carts_path
   end

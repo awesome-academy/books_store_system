@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   def index
     @orders = current_user.orders.create_desc
   end
-  
+
   def create
     @order = current_user.orders.build order_params
     if @order.save

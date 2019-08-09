@@ -1,7 +1,7 @@
 <% current_cart.each do |key, val| %>
   <tr>
     <% product = find_product key %>
-    <td><%= product.id %></td>
+    <td class="id"><%= product.id %></td>
     <td><%= image_tag product.picture.url %></td>
     <td><%= product.title %></td>
     <td class="price"><%= product.price %></td>

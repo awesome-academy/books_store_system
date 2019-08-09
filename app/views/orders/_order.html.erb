@@ -1,5 +1,5 @@
   <tr>
-    <td><%= order.created_at %></td>
+    <td><%= I18n.l(order.created_at, format: :long, locale: params[:locale]) %></td>
     <td><%= order.deliver_status %></td>
     <td><%= order.receiver %></td>
     <td><%= number_to_currency order.total_price, locale: params[:locale] %></td>
