@@ -3,6 +3,12 @@ class Category < ApplicationRecord
   has_many :childs, class_name: Category.name, foreign_key: :parent_id,
     dependent: :destroy
   has_many :products, dependent: :destroy
+
+  mount_uploader :picture, PictureUploader
+
   validates :name, presence: true,
     length: {maximum: Settings.maximum_length_name}
+  validates :picture, presence: true
+
+  scope :parent_category, ->{where(parent_id: nil)}
 end

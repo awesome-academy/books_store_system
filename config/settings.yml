@@ -4,3 +4,7 @@ maximum_length_address: 255
 max_content: 140
 minimum_length_pass: 6
 maximum_length_phone: 15
+category:
+  image_height: 400
+  image_width: 400
+file_accept: image/jpeg, image/gif, image/png

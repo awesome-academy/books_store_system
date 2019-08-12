@@ -287,14 +287,17 @@
   margin-bottom: 10px;
 }
 .btn_custom{
-    width: 150px;
-    background-color: #00cc66;
-    color: white;
-    border: none;
-    transition: 0.3s;
-    height: 40px;
-    font-size: 16px;
-    &:hover{
-      background-color: yellowgreen;
-    }
+  width: 150px;
+  background-color: #00cc66;
+  color: white;
+  border: none;
+  transition: 0.3s;
+  height: 40px;
+  font-size: 16px;
+  &:hover{
+    background-color: yellowgreen;
   }
+}
+.form_custom{
+  width: 200px;
+}

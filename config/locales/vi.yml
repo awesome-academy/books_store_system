@@ -1,4 +1,12 @@
 vi:
+  admin:
+    categories:
+      new:
+        name: Tên danh mục
+        placeholder: tên danh mục
+        parent: Danh mục cha
+        create: Tạo danh mục
+        no_parent: Là danh mục gốc
   layouts:
     header:
       tim: Tìm
@@ -52,3 +60,5 @@ vi:
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
+  category_created: Tạo danh mục thành công!
+  create_failse: Tạo danh mục thất bại !
