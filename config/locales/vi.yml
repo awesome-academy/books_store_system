@@ -81,10 +81,25 @@ vi:
       collapse: Thu gọn
       vnd: ₫
       review: Gửi đánh giá của bạn
+      out_stock: Out of stock
+      add_to_cart: Mua hàng
     form_review:
       rate: Đánh giá
       comment: Thêm bình luận
       submit: Gửi
+  carts:
+    index:
+      cart: Giỏ hàng
+      image: Ảnh
+      title: Tên
+      price: Giá
+      quantity: Số lượng
+      amount: Thành tiền
+      vnd: ₫
+      total_price: Tổng tiền
+    list_cart:
+      vnd: ₫
+      you_sure: Xóa sản phẩm khỏi giỏ hàng ?
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
@@ -95,3 +110,7 @@ vi:
   not_found_product: Không tìm thấy sản phẩm
   review_success: Đánh giá thành công !
   review_fails: Đánh giá thất bại !
+  update_cart: Cập nhật giỏ hàng !
+  delete_cart: Xóa thành công !
+  quantity_in_stock: "Số lượng trong kho chỉ còn: "
+  please_enter_num: Nhập số lượng sản phẩm

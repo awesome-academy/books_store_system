@@ -35,6 +35,16 @@
                 <%= number_to_currency(@product.price, unit: t(".vnd"), format: "%n %u")%>
               </div>
               <div class="goshop">
+                <% if @product.num_exist.zero? %>
+                  <div class="outstock"><% t ".out_stock" %></div>
+                <% else %>
+                  <%= form_with url: carts_path  do |f| %>
+                    <%= f.number_field :quantity, value: 1, class: "number_custom" %>
+                    <%= f.hidden_field :id, value: @product.id %>
+                    <%= f.hidden_field :num_exist, value: @product.num_exist %>
+                    <%= f.submit t(".add_to_cart"), class: "submit-btn btn" %>
+                  <% end %>
+                <% end %>
               </div>
             </div> <!-- het prices-container -->
             <div class="intro">

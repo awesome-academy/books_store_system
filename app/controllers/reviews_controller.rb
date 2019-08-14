@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.build review_params
-    
+
     if @review.save
       flash[:success] = t "review_success"
     else

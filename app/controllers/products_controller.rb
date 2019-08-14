@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :load_product, only: :show
   def show
-    @product = Product.find_by id: params[:id]
     @list_review = @product.reviews.create_desc
-    return if @product
-    flash[:danger] = "not_found_product"
-    redirect_to root_url
   end
 end

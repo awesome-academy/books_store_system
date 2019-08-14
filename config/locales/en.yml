@@ -81,10 +81,25 @@ en:
       collapse: Collapse
       vnd: $
       review: Create your review
+      out_stock: Hết hàng
+      add_to_cart: Add to cart
     form_review:
       rate: Rate
       comment: Comments
       submit: Submit
+  carts:
+    index:
+      cart: Cart
+      image: Image
+      title: Title
+      price: Price
+      quantity: Quantity
+      amount: Mounts
+      vnd: $
+      total_price: Total price
+    list_cart:
+      vnd: $
+      you_sure: You sure ?
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
@@ -95,3 +110,8 @@ en:
   not_found_product: Not found product !
   review_success: Review success !
   review_fails: Review fails !
+  update_cart: Cart was update !
+  delete_cart: Delete success !
+  quantity_in_stock: "Quantity in stock: "
+  please_enter_num: Please enter the quantity
+
