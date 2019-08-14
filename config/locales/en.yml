@@ -80,6 +80,11 @@ en:
       view_more: View more...
       collapse: Collapse
       vnd: $
+      review: Create your review
+    form_review:
+      rate: Rate
+      comment: Comments
+      submit: Submit
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
@@ -88,6 +93,5 @@ en:
   create_success: Create success !
   create_product_failse: Create product fails !
   not_found_product: Not found product !
-  js:
-    view_more: View more...
-    collapse: Collapse
+  review_success: Review success !
+  review_fails: Review fails !

@@ -80,6 +80,11 @@ vi:
       view_more: Xem thêm nội dung...
       collapse: Thu gọn
       vnd: ₫
+      review: Gửi đánh giá của bạn
+    form_review:
+      rate: Đánh giá
+      comment: Thêm bình luận
+      submit: Gửi
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
@@ -88,5 +93,5 @@ vi:
   create_success: Thêm thành công !
   create_product_failse: Thêm sản phẩm thất bại !
   not_found_product: Không tìm thấy sản phẩm
-  view_more: Xem thêm nội dung...
-  collapse: Thu gọn
+  review_success: Đánh giá thành công !
+  review_fails: Đánh giá thất bại !
