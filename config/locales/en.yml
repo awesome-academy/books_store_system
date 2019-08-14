@@ -68,6 +68,18 @@ en:
       create: Create account
     show:
       logout: Logout
+  products:
+    show:
+      home: Home
+      author: Author
+      publisher: Publisher
+      free_plastic: Free plastic wrap
+      free_ship: Free delivery in inner city HCM with orders
+      free_ship2: Free delivery nationwide with orders
+      book_intro: Book introduction
+      view_more: View more...
+      collapse: Collapse
+      vnd: $
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
@@ -75,3 +87,7 @@ en:
   create_failse: Create category fails !
   create_success: Create success !
   create_product_failse: Create product fails !
+  not_found_product: Not found product !
+  js:
+    view_more: View more...
+    collapse: Collapse

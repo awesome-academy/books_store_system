@@ -68,6 +68,18 @@ vi:
       create: Tạo tài khoản
     show:
       logout: Đăng xuất
+  products:
+    show:
+      home: Trang chủ
+      author: Tác giả
+      publisher: Nhà phát hành
+      free_plastic: Bọc plastic miễn phí
+      free_ship: Giao hàng miễn phí trong nội thành TP. HCM với đơn hàng
+      free_ship2: Giao hàng miễn phí toàn quốc với đơn hàng
+      book_intro: Giới thiệu sách
+      view_more: Xem thêm nội dung...
+      collapse: Thu gọn
+      vnd: ₫
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
@@ -75,3 +87,6 @@ vi:
   create_failse: Tạo danh mục thất bại !
   create_success: Thêm thành công !
   create_product_failse: Thêm sản phẩm thất bại !
+  not_found_product: Không tìm thấy sản phẩm
+  view_more: Xem thêm nội dung...
+  collapse: Thu gọn

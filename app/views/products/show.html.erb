@@ -1,0 +1,66 @@
+<% provide :title, @product.title %>
+<div class="clear"></div>
+<section class="main-detail">
+  <div class="container">
+    <div class="row">
+      <div class="pathway">
+        <ul class="path">
+          <li>
+            <%= link_to t(".home"), root_url %>
+          </li>
+          <% if parent_cate(@product.id).present? %>
+            <li><%= link_to parent_cate(@product.id).name, "#" %></li>
+          <% end %>
+          <li><%= link_to @product.category.name, "#" %></li>
+          <li><%= @product.title %></li>
+        </ul>
+      </div> <!-- het pathway -->
+      <div class="content-detail">
+        <div class="left">
+          <%= image_tag @product.picture.url %>
+        </div>
+        <div class="right">
+          <div class="product-infor">
+            <h1><%= @product.title %></h1>
+            <div class="viewfield">
+              <div class="author">
+                <span><%= t ".author" %>: <%= @product.author_name %> </span>
+              </div>
+              <div class="publisher">
+                <span><%= t ".publisher" %>: <%= @product.publisher_name %></span>
+              </div>
+            </div> <!-- het viewfield -->
+            <div class="prices-container">
+              <div class="price">
+                <%= number_to_currency(@product.price, unit: t(".vnd"), format: "%n %u")%>
+              </div>
+              <div class="goshop">
+              </div>
+            </div> <!-- het prices-container -->
+            <div class="intro">
+              <p><i class=" fa fa-check"></i><span><%= t ".free_plastic" %></span></p>
+              <p><i class=" fa fa-check"></i><span><%= t ".free_ship" %></span></p>
+              <p><i class=" fa fa-check"></i><span><%= t ".free_ship2" %></span>
+              </p>
+            </div> <!-- het intro -->
+          </div> <!-- het produce-infor -->
+        </div> <!-- het right -->
+        <div class="clear"></div>
+
+        <div class="aboutbook">
+          <div class="about">
+            <h3><%= t ".book_intro" %></h3>
+          </div>
+          <div class="content collapse1" id="content">
+            <p>
+              <%= @product.description %>
+            </p>
+          </div>
+          <div class="viewmore" onclick="viewmore()" id="viewmore">
+            <span><%= t ".view_more" %></span>
+          </div>
+        </div> <!-- het gioi thieu sach -->
+      </div> <!-- het content-detail -->
+    </div>
+  </div> <!-- het container -->
+</section>
