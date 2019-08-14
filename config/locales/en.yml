@@ -7,6 +7,17 @@ en:
         parent: Category's parent
         create: Create
         no_parent: No parent
+    products:
+      new:
+        title: Title
+        placeholder: Product's name
+        category: Category
+        publisher_name: Publisher
+        author_name: Author
+        price: Price
+        num_exist: Number of product
+        description: Description
+        create: Create
   layouts:
     header:
       tim: Search
@@ -60,5 +71,7 @@ en:
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
-  category_created: Category_create!
-  create_failse: Create failse !
+  category_created: Category was created !
+  create_failse: Create category fails !
+  create_success: Create success !
+  create_product_failse: Create product fails !

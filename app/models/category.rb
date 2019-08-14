@@ -11,4 +11,5 @@ class Category < ApplicationRecord
   validates :picture, presence: true
 
   scope :parent_category, ->{where(parent_id: nil)}
+  scope :not_parent_category, ->{where.not(parent_id: nil)}
 end
