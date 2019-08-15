@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_065949) do
+ActiveRecord::Schema.define(version: 2019_08_15_020810) do
+
+  create_table "cart_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "num_product"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "cart_id"
+    t.index ["product_id"], name: "index_cart_products_on_product_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,17 +31,6 @@ ActiveRecord::Schema.define(version: 2019_08_06_065949) do
     t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "order_products", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "order_id"
-    t.integer "num_product"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "index_order_products_on_order_id"
-    t.index ["product_id"], name: "index_order_products_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_065949) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cart_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
