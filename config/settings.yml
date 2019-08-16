@@ -9,3 +9,5 @@ category:
   image_width: 400
 file_accept: image/jpeg, image/gif, image/png
 scroll: 30
+stars_number_rate: 5
+rate: [1,2,3,4,5]

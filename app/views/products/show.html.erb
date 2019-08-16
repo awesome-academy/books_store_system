@@ -40,8 +40,8 @@
             <div class="intro">
               <p><i class=" fa fa-check"></i><span><%= t ".free_plastic" %></span></p>
               <p><i class=" fa fa-check"></i><span><%= t ".free_ship" %></span></p>
-              <p><i class=" fa fa-check"></i><span><%= t ".free_ship2" %></span>
-              </p>
+              <p><i class=" fa fa-check"></i><span><%= t ".free_ship2" %></span></p>
+              <label for="review_content"><%= t(".review") %></label>
             </div> <!-- het intro -->
           </div> <!-- het produce-infor -->
         </div> <!-- het right -->
@@ -62,5 +62,11 @@
         </div> <!-- het gioi thieu sach -->
       </div> <!-- het content-detail -->
     </div>
+    <% if logged_in? %>
+      <%= render "form_review" %>
+    <% end %>
+    <% if @list_review %>
+      <%= render "list_review" %>
+    <% end %>
   </div> <!-- het container -->
 </section>
