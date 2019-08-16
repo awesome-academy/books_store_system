@@ -304,3 +304,151 @@
 .form_custom_pro{
   width: 500px;
 }
+.main-detail{
+  margin-bottom: 100px;
+  .pathway{
+    width: 100%;
+    height: 25px;
+    display: block;
+    .path{
+      list-style: none;
+      line-height: 25px;
+      padding: 0;
+      margin: 0;
+      z-index: 10;
+      li{
+        float: left;
+        font-size: 15px;
+        margin-top: 5px;
+        color: #999999;
+        margin-right: 5px;
+        a{
+          color: #00cc66;
+          padding: 0 10px 0 0;
+          text-decoration: none;
+          background: url(orange-arrow-r.png) no-repeat right 2px;
+          font-family: arial;
+        }
+      }
+    }
+  }
+  .content-detail {
+    margin-top: 20px;
+    width: 100%;
+    .left {
+      width: 22%;
+      float: left;
+      height: 350px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right {
+      float: left;
+      width: 75%;
+      height: 350px;
+      margin-left: 20px;
+      .product-infor {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-left: 73px;
+        h1{
+          font-size: 21px;
+          font-weight: 500;
+        }
+      }
+      .viewfield {
+        margin-top: 10px;
+        display: flex;
+        font-size: 16px;
+        .author {
+          margin-right: 100px;
+          font-weight: 500;
+          span{
+            color: #00b468;
+          }
+        }
+        .publisher{
+          font-weight: 500;
+          color: #00b468;
+        }
+      }
+      .prices-container {
+        margin-top: 14px;
+        width: 100%;
+        border-top: 1px solid #e4e4e4;
+        display: flex;
+        border-bottom: 1px solid #e4e4e4;
+        height: 83px;
+        padding: 10px 0;
+        .price {
+          font-size: 35px;
+          font-weight: 700;
+          color: #00cc66;
+          width: 200px;
+          overflow: hidden;
+          font-family: arial;
+        }
+      }
+      .hethang{
+        color:white;border: 1px solid red;
+        background:red;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      .intro {
+        margin-top: 25px;
+        span{
+          font-size:15px;
+          b{
+            color: #f37924;
+          }
+        }
+        i{
+          color: #00cc66;
+          padding-right: 6px;
+          font-size: 15px;
+        }
+      }
+    }
+    .aboutbook{
+      margin-top: 30px;
+      .about{
+        border-bottom: 1px solid #e4e4e4;
+        h3 {
+          font-size: 22px;
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+      }
+      .content{
+        p{
+          padding-top: 10px;
+          text-align: justify;
+        }
+      }
+      .collapse1{
+        height: 50px;
+        overflow: hidden;
+      }
+      .viewmore{
+        height: 40px;
+        width: 400px;
+        margin: 10px auto;
+        line-height: 40px;
+        background-color: #00cc66;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        font-size: 19px;
+        &:hover{
+          cursor: pointer;
+	        background-color: #029243;
+        }
+      }
+    }
+  }
+}
