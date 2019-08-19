@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :products, only: :show
     resources :reviews, only: %i(new create)
     resources :carts, only: %i(create index destroy)
+    resources :orders, only: :create
     namespace :admin do
       resources :categories, only: %i(new create)
       resources :products, only: %i(new create)

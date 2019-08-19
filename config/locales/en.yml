@@ -97,9 +97,16 @@ en:
       amount: Mounts
       vnd: $
       total_price: Total price
+      login_to: Login to order
     list_cart:
       vnd: $
       you_sure: You sure ?
+    form_order:
+      infor: Receiver's information
+      receiver: Receiver
+      phone: Phone
+      address: Address
+      confirm: Confirm
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination
@@ -114,4 +121,6 @@ en:
   delete_cart: Delete success !
   quantity_in_stock: "Quantity in stock: "
   please_enter_num: Please enter the quantity
-
+  order_success: Order success !
+  order_failse: Order failse !
+  cart_empty: Cart is empty !

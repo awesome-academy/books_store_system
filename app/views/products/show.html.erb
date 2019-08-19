@@ -8,8 +8,8 @@
           <li>
             <%= link_to t(".home"), root_url %>
           </li>
-          <% if parent_cate(@product.id).present? %>
-            <li><%= link_to parent_cate(@product.id).name, "#" %></li>
+          <% if parent_cate(@product.category_id).present? %>
+            <li><%= link_to parent_cate(@product.category_id).name, "#" %></li>
           <% end %>
           <li><%= link_to @product.category.name, "#" %></li>
           <li><%= @product.title %></li>

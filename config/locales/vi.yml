@@ -97,9 +97,16 @@ vi:
       amount: Thành tiền
       vnd: ₫
       total_price: Tổng tiền
+      login_to: Đăng nhập để thanh toán
     list_cart:
       vnd: ₫
       you_sure: Xóa sản phẩm khỏi giỏ hàng ?
+    form_order:
+      infor: Thông tin người nhận
+      receiver: Người nhận
+      phone: Số điện thoại
+      address: Địa chỉ nhận
+      confirm: Xác nhận
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
@@ -114,3 +121,6 @@ vi:
   delete_cart: Xóa thành công !
   quantity_in_stock: "Số lượng trong kho chỉ còn: "
   please_enter_num: Nhập số lượng sản phẩm
+  order_success: Đặt hàng thành công !
+  order_failse: Đặt hàng thất bại !
+  cart_empty: Giỏ hàng trống !
