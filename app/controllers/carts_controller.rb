@@ -4,13 +4,14 @@ class CartsController < ApplicationController
   before_action :total_cart, only: :index
 
   def create
-    product_id = params[:id]
-    session[:cart][product_id] = params[:quantity].to_i
+    session[:cart][params[:id]] = params[:quantity].to_i
     flash[:success] = t "update_cart"
     redirect_to carts_path
   end
 
-  def index; end
+  def index
+    @order = current_user.orders.build if logged_in?
+  end
 
   def destroy
     session[:cart].delete params[:id]
@@ -22,7 +23,7 @@ class CartsController < ApplicationController
 
   def set_cart
     return if session[:cart]
-    session[:cart] = []
+    session[:cart] = {}
   end
 
   def check_num_exist
@@ -47,6 +48,7 @@ class CartsController < ApplicationController
   end
 
   def total_cart
+    return unless current_cart?
     @total = 0
     session[:cart].each do |key, val|
       product = find_product key

@@ -1,7 +1,7 @@
 <% provide :title, t(".cart") %>
 <section class="cart_index">
   <div class="container">
-    <% if session[:cart].empty? %>
+    <% unless current_cart? %>
       <div class="cart_empty">
         <%= image_tag "cart-empty.png" %>
       </div>
@@ -28,5 +28,13 @@
         </div>
       </div>
     <% end %>
+    <div class="clear"></div>
+    <div class="order">
+      <% unless logged_in? %>
+        <%= link_to t(".login_to"), login_path %>
+      <% else %>
+        <%= render "form_order" %>
+      <% end %>
+    </div>
   </div>
 </section>

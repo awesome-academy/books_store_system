@@ -8,7 +8,7 @@
     </div>
     <div class="field">
       <%= f.label t(".category") %>
-      <%= f.select :category_id, options_for_select(child_category),
+      <%= f.select :category_id, options_for_select(childs_category),
         {prompt: t(".select_category")}, class:"form-control form_custom_pro" %>
     </div>
     <div class="field">

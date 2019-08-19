@@ -6,10 +6,10 @@ class Admin::ProductsController < AdminsController
   def create
     @product = Product.new product_params
     if @product.save
-      flash[:success] = "create_success"
+      flash[:success] = t "create_success"
       redirect_to root_url
     else
-      flash[:danger] = "create_product_failse"
+      flash[:danger] = t "create_product_failse"
       render :new
     end
   end

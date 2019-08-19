@@ -17,4 +17,8 @@ module CartsHelper
   def current_cart
     @curren_cart = session[:cart]
   end
+
+  def current_cart?
+    current_cart.present?
+  end
 end

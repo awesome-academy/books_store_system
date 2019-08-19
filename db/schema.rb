@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_065949) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "deliver_status"
+    t.integer "deliver_status", default: 0
     t.float "total_price"
     t.string "receiver"
     t.string "phone"
