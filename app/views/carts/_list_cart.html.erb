@@ -1,0 +1,26 @@
+<% current_cart.each do |key, val| %>
+  <tr>
+    <% product = find_product key %>
+    <td><%= product.id %></td>
+    <td><%= image_tag product.picture.url %></td>
+    <td><%= product.title %></td>
+    <td><%=  number_to_currency(product.price, unit: t(".vnd"), format: "%n %u") %></td>
+    <td>
+      <%= form_with url: carts_path do |f| %>
+        <%= f.hidden_field :id, value: product.id %>
+        <%= f.number_field :quantity, value: val, class: "number_custom" %>
+        <%= f.hidden_field :num_exist, value: product.num_exist %>
+        <%= f.button do %>
+          <i class="fas fa-redo"></i>
+        <% end %>
+      <% end %>
+      <%= link_to cart_path(id: product.id), method: :delete, data: {confirm: t(".you_sure")} do %>
+        <button><i class="fas fa-trash"></i></button>
+      <% end %>
+    </td>
+    <td>
+      <%= number_to_currency(total_price(product.price, val),
+        unit: t(".vnd"), format: "%n %u")%>
+    </td>
+  </tr>
+<% end %>

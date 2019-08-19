@@ -1,0 +1,32 @@
+<% provide :title, t(".cart") %>
+<section class="cart_index">
+  <div class="container">
+    <% if session[:cart].empty? %>
+      <div class="cart_empty">
+        <%= image_tag "cart-empty.png" %>
+      </div>
+    <% else %>
+      <div class="gh">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="5%">#</th>
+              <th scope="15%"><%= t ".image" %></th>
+              <th scope="25%"><%= t ".title" %></th>
+              <th scope="10%"><%= t ".price" %></th>
+              <th width="15%"><%= t ".quantity" %></th>
+              <th scope="10%"><%= t ".amount" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "list_cart" %>
+          </tbody>
+        </table>
+        <div class="total_price">
+          <%= t ".total_price" %>: <%=  number_to_currency(@total, unit: t(".vnd"),
+            format: "%n %u") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
