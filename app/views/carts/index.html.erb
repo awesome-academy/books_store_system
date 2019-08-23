@@ -16,6 +16,7 @@
               <th scope="10%"><%= t ".price" %></th>
               <th width="15%"><%= t ".quantity" %></th>
               <th scope="10%"><%= t ".amount" %></th>
+              <th scope="10%"><%= t ".action" %></th>
             </tr>
           </thead>
           <tbody>
@@ -23,8 +24,10 @@
           </tbody>
         </table>
         <div class="total_price">
-          <%= t ".total_price" %>: <%=  number_to_currency(@total, unit: t(".vnd"),
-            format: "%n %u") %>
+          <%= @total %>
+        </div>
+        <div class="total_price_name">
+          <%= t ".total_price" %>:
         </div>
       </div>
     <% end %>

@@ -6,4 +6,7 @@ class Order < ApplicationRecord
   ORDER_PARAMS = %i(receiver phone address total_price).freeze
 
   validates :receiver, presence: true
+  validates :address, presence: true
+  validates :phone, presence: true
+  scope :create_desc, ->{order created_at: :desc}
 end

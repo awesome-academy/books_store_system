@@ -8,8 +8,8 @@ class Category < ApplicationRecord
 
   validates :name, presence: true,
     length: {maximum: Settings.maximum_length_name}
-  validates :picture, presence: true
 
   scope :parent_category, ->{where(parent_id: nil)}
   scope :not_parent_category, ->{where.not(parent_id: nil)}
+  scope :childs_category, ->(id){select(:id).where(parent_id: id)}
 end

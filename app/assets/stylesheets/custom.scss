@@ -7,6 +7,7 @@
   background: $green;
   .top-header{
     padding-top: 5px;
+    padding-bottom: 10px;
     .logo{
       padding-bottom: -5px;
       img{
@@ -20,6 +21,7 @@
       margin-top: 7px;
       margin-bottom: -9px;
       display: inline-block;
+      position: relative;
     }
     .search{
       background-color: $color10;
@@ -140,6 +142,13 @@
     .menu{
       width: 19%;
       float: left;
+      position: relative;
+      &:hover{
+        cursor: pointer;
+        .list{
+          display: block;
+        }
+      }
       .menu_products{
         background: $white;
         padding: 7px 5px;
@@ -148,19 +157,22 @@
         color: $color9;
         width: 100%;
         height: 30px;
+        position: relative;
         i{
           margin-right: 4px;
         }
       }
       .list{
-        position: relative;
+        position: absolute;
         width: 100%;
         padding-left: 0;
         background-color: $white;
         list-style-type: none;
-        // display: none;
+        display: none;
+        z-index: 1001;
         li{
           list-style: none;
+          z-index: 1001;
           height: 30px;
           width: 222px;
           transition: background-color 0s;
@@ -178,6 +190,7 @@
             .list-child{
               position: absolute;
               top: 0;
+              z-index: 1001;
               left: 100%;
               width: 100%;
               height: 100%;
@@ -221,6 +234,8 @@
 }
 .footer{
   margin-top: 50px;
+  padding-top: 30px;
+  background-color: #fbf0ee;
   .footer-menu{
     width: 100%;
     height: 100px;
@@ -309,6 +324,7 @@
 }
 .main-detail{
   margin-bottom: 100px;
+  z-index: 1;
   .pathway{
     width: 100%;
     height: 25px;
@@ -317,7 +333,6 @@
       list-style: none;
       line-height: 25px;
       padding: 0;
-      margin: 0;
       z-index: 10;
       li{
         float: left;
@@ -529,12 +544,295 @@ td{
 .total_price{
   display: block;
   float: right;
-  width: 222px;
+  width: 150px;
   height: 50px;
   background-color: $white_rose;
   line-height: 50px;
   text-align: center;
   color: $green_gray;
-  border-radius: 6px;
   font-size: 16px;
+}
+.total_price_name{
+  display: block;
+  float: right;
+  width: 100px;
+  height: 50px;
+  background-color: $white_rose;
+  line-height: 50px;
+  text-align: center;
+  color: $green_gray;
+  font-size: 16px;
+}
+.neyud{
+  width: 19%;
+  float:left;
+}
+.banner{
+  width: 80%;
+  float:right;
+  z-index: 1000;
+  padding: 10px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.floor1 {
+  .title {
+    width: 100%;
+    height: 38px;
+    background-color: #f2f2f2;
+    .titlechild{
+      display: block;
+      float: left;
+      color: white;
+      width: 98px;
+      height: 100%;
+      background-color: #00cc66;
+      font-size: 20px;
+      line-height: 38px;
+      padding-left: 7px;
+      font-family: serif;
+      font-weight:600;
+    }
+    .seeall{
+      float: right;
+      color:black;
+      font-family: serif;
+      font-weight:700;
+      font-size: 15px;
+      height:38px;
+      line-height:38px;
+      padding-right:10px;
+      &:hover{
+        color: #00cc66;
+        text-decoration: none;
+      }
+    }
+  }
+  .blockcontent {
+    width: 100%;
+    height: 350px;
+    padding: 8px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .slideshow{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    left: 5px;
+    transition: all 0.5s ease 0s;
+    .productcontainer {
+      height: 335px;
+      width: 223px;
+      display: inline-block;
+      margin-left: 5px;
+      .oneproduct{
+        width: 155px;
+        background: #FFF;
+        padding: 0 5px;
+        margin: 10px auto;
+        .products {
+          width: 100%;
+          height: 100%;
+          .image {
+            width: 130px;
+            height: 182px;
+            overflow: hidden;
+            transition: 0.3s;
+            img{
+              width: 100%;
+              height: 100%;
+              &:hover{
+                transform: scale(1.2);
+              }
+            }
+          }
+          .productname{
+            font-size: 90%;
+            margin-top: 10px;
+            cursor: pointer;
+            a{
+              color: black;
+              transition: 0.2s;
+              font-weight: 500;
+              height:40px;
+              display: block;
+              overflow: hidden;
+              text-transform: uppercase;
+              &:hover{
+                color: #00cc66;
+                text-decoration: none;
+             }
+            }
+          }
+          .fields {
+            font-size: 13px;
+            font-weight: 500;
+          }
+          .prices {
+            font-weight: 600;
+            font-size: 95%;
+          }
+        }
+      }
+    }
+  }
+  .list-btn {
+    z-index: 2001;
+    button{
+      border: none;
+      background: none;
+      &:hover{
+        i{
+        color: #00cc66;
+        }
+      }
+    }
+    .prevbtn {
+      position: absolute;
+      top: 110px;
+      left: 0;
+      width: 20px;
+      height: 30px;
+      display: block;
+      color: black;
+    }
+    .nextbtn {
+      position: absolute;
+      right: 0;
+      top: 110px;
+      width: 20px;
+      height: 30px;
+      display: block;
+      color: black;
+    }
+  }
+}
+.block-content{
+  width: 100%;
+  display: block;
+  .block{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+    overflow: hidden;
+    h1{
+      font-size: 16px;
+    }
+    .allproducts {
+      width: 100%;
+      overflow: hidden;
+      .productcontainer {
+        height: 335px;
+        width: 210px;
+        display: inline-block;
+        margin-left: 5px;
+        .oneproduct{
+          width: 155px;
+          background: #FFF;
+          padding: 0 5px;
+          margin: 10px auto;
+          .products {
+            width: 100%;
+            height: 100%;
+            .image {
+              width: 130px;
+              height: 182px;
+              overflow: hidden;
+              transition: 0.3s;
+              img{
+                width: 100%;
+                height: 100%;
+                &:hover{
+                  transform: scale(1.2);
+                }
+              }
+            }
+            .productname{
+              font-size: 90%;
+              margin-top: 10px;
+              cursor: pointer;
+              a{
+                color: black;
+                transition: 0.2s;
+                font-weight: 500;
+                height:40px;
+                display: block;
+                overflow: hidden;
+                text-transform: uppercase;
+                &:hover{
+                  color: #00cc66;
+                  text-decoration: none;
+              }
+              }
+            }
+            .fields {
+              font-size: 13px;
+              font-weight: 500;
+            }
+            .prices {
+              font-weight: 600;
+              font-size: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.d_block{
+  display: block !important;
+}
+.titlechild2{
+  width: 160px !important;
+}
+.p2{
+  width: 230px !important;
+  margin-left: 0 !important;
+}
+
+#show-search-product {
+  z-index: 2;
+  background: white;
+  width: 64.5%;
+  position: absolute;
+  // display: none;
+}
+
+#show-search-product .small-product {
+  padding: 1%;
+  border-bottom: 1px solid ghostwhite;
+  &:hover{
+    background-color: $color12;
+  }
+}
+
+#show-search-product img {
+  margin-left: 7%;
+  width: 100%;
+}
+
+#show-search-product .info {
+  padding: 0px;
+  margin: 0;
+  color: black;
+}
+
+#show-search-product .info span {
+  font-size: 13px;
+}
+#search-form{
+  position: relative;
+}
+.d_none{
+  display: none;
+}
+.goshop{
+  padding-top: 8px;
+  margin-left: 10px;
+}
+.collap{
+  position: relative;
 }

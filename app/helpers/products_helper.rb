@@ -8,4 +8,14 @@ module ProductsHelper
   def build_review
     @review = current_user.reviews.build
   end
+
+  def average_star
+    num = @reviews.size
+    return unless num.positive?
+    total = 0
+    @reviews.each do |review|
+      total += review.rate
+    end
+    (total / num).round(Settings.round_helper)
+  end
 end

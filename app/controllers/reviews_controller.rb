@@ -5,11 +5,14 @@ class ReviewsController < ApplicationController
     @review = current_user.reviews.build review_params
 
     if @review.save
-      flash[:success] = t "review_success"
+      respond_to do |f|
+        f.html{redirect_to @review.product}
+        f.js
+      end
     else
-      flash[:danger] = t "reviewfails"
+      flash[:danger] = t "review_fails"
+      redirect_to @review.product
     end
-    redirect_to product_path(id: @review.product_id)
   end
 
   private

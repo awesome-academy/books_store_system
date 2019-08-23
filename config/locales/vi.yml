@@ -7,6 +7,7 @@ vi:
         parent: Danh mục cha
         create: Tạo danh mục
         no_parent: Là danh mục gốc
+        title: Thêm danh mục
     products:
       new:
         title: Tên sách
@@ -18,6 +19,19 @@ vi:
         num_exist: Số lượng
         description: Mô tả
         create: Thêm sách
+        title: Thêm sách mới
+  orders:
+    index:
+      history: Lịch sử đơn hàng
+      time: Thời gian đặt
+      status: Tình trạng
+      receiver: Người nhận
+      mount: Tổng giá trị
+      address: Địa chỉ
+      action: Hành động
+      no_order: Chưa có đơn hàng nào
+    order:
+      details: Xem chi tiết
   layouts:
     header:
       tim: Tìm
@@ -38,6 +52,12 @@ vi:
       shopping_guide: Hướng dẫn mua hàng
       transportation_method: Phương thức vận chuyển
       payment_method: Phương thức thanh toán
+    top_product:
+      seeall: Xem tất cả
+      top_sale: Sách bán chạy
+    newproduct:
+      seeall: Xem tất cả
+      new_book: Sách mới
   shared:
     error_messages:
       errors_count:
@@ -98,6 +118,7 @@ vi:
       vnd: ₫
       total_price: Tổng tiền
       login_to: Đăng nhập để thanh toán
+      action: Hành động
     list_cart:
       vnd: ₫
       you_sure: Xóa sản phẩm khỏi giỏ hàng ?
@@ -107,6 +128,20 @@ vi:
       phone: Số điện thoại
       address: Địa chỉ nhận
       confirm: Xác nhận
+  categories:
+    show:
+      home: Trang chủ
+  newproducts:
+    index:
+      newbook: Sách mới
+      home: Trang chủ
+  topsales:
+    index:
+      topsale: Sách bán chạy
+      home: Trang chủ
+  newproduct:
+    index:
+      new_book: New Book
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
@@ -117,10 +152,11 @@ vi:
   not_found_product: Không tìm thấy sản phẩm
   review_success: Đánh giá thành công !
   review_fails: Đánh giá thất bại !
-  update_cart: Cập nhật giỏ hàng !
+  update_cart: Thêm giỏ hàng thành công !
   delete_cart: Xóa thành công !
   quantity_in_stock: "Số lượng trong kho chỉ còn: "
   please_enter_num: Nhập số lượng sản phẩm
   order_success: Đặt hàng thành công !
   order_failse: Đặt hàng thất bại !
   cart_empty: Giỏ hàng trống !
+  not_found_cate: Không tìm thấy danh mục
