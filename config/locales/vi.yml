@@ -30,6 +30,7 @@ vi:
       address: Địa chỉ
       action: Hành động
       no_order: Chưa có đơn hàng nào
+      myorder: Lịch sử đơn hàng
     order:
       details: Xem chi tiết
   layouts:
@@ -160,3 +161,4 @@ vi:
   order_failse: Đặt hàng thất bại !
   cart_empty: Giỏ hàng trống !
   not_found_cate: Không tìm thấy danh mục
+  user_not_admin: Đăng nhập tài khoản admin

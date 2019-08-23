@@ -30,6 +30,7 @@ en:
       address: Address
       action: Action
       no_order: No order
+      myorder: My order
     order:
       details: Details
   layouts:
@@ -160,3 +161,4 @@ en:
   order_failse: Order failse !
   cart_empty: Cart is empty !
   not_found_cate: Not found category
+  user_not_admin: User not Admin

@@ -11,5 +11,7 @@ class Category < ApplicationRecord
 
   scope :parent_category, ->{where(parent_id: nil)}
   scope :not_parent_category, ->{where.not(parent_id: nil)}
-  scope :childs_category, ->(id){select(:id).where(parent_id: id)}
+  scope :childs_category, (lambda do |id|
+    where("parent_id = ? OR id = ?", id, id).map(&:id)
+  end)
 end

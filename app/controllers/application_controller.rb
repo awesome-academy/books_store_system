@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
 
   def is_admin?
     return if current_user.admin?
+    flash[:danger] = t "user_not_admin"
+    redirect_to login_path
   end
 
   def set_locale
