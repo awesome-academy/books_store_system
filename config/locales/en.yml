@@ -1,4 +1,26 @@
 en:
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: Title can't be blank
+              too_long: Title too long
+            publisher_name:
+              blank: Publisher can't be blank
+              too_long: Publisher too long !
+            author_name:
+              blank: Author can't be blank !
+              too_long: Author too long
+            price:
+              blank: Price can't be blank !
+            num_exist:
+              blank: Num of exist can't be blank
+            description:
+              blank: Description can't be blank
+            picture:
+              blank: Picture can't be blank
   admin:
     categories:
       new:

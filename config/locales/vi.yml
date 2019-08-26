@@ -1,4 +1,26 @@
 vi:
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: Tên không thể trống
+              too_long: Tên quá dài
+            publisher_name:
+              blank: Nhà phát hành không thể trống
+              too_long: Tên nhà phát hành quá dài
+            author_name:
+              blank: Tác giả không thể trống
+              too_long: Tên tác giả quá dài
+            price:
+              blank: Giá không thể trống
+            num_exist:
+              blank: Số lượng không thể trống
+            description:
+              blank: Mô tả không thể trống
+            picture:
+              blank: Hình ảnh không thể trống
   admin:
     categories:
       new:
