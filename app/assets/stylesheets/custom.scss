@@ -836,3 +836,20 @@ td{
 .collap{
   position: relative;
 }
+.order_details img{
+  width: 50px;
+  height: 55px;
+  padding: 2px 0;
+}
+.custom_table{
+  display:inline-block;
+}
+.order_details{
+  display: inline-block;
+}
+.btn_infor{
+  border: 1px solid $color1;
+  &:hover{
+    background-color: $color2;
+  }
+}

@@ -21,6 +21,12 @@ vi:
               blank: Mô tả không thể trống
             picture:
               blank: Hình ảnh không thể trống
+    attributes:
+      order:
+        deliver_status:
+          processing: Đang giao hàng
+          cancel: Đã hủy
+          success: Giao hàng thành công
   admin:
     categories:
       new:
@@ -55,6 +61,14 @@ vi:
       myorder: Lịch sử đơn hàng
     order:
       details: Xem chi tiết
+      cancel_order: Hủy đơn hàng
+      see_details: Xem chi tiết
+      image: Hình ảnh
+      name: Tên sản phẩm
+      number: Số lượng
+      amount: Thành tiền
+      close: Đóng
+      you_sure: Bạn chắc chắn hủy ?
   layouts:
     header:
       tim: Tìm
@@ -184,3 +198,5 @@ vi:
   cart_empty: Giỏ hàng trống !
   not_found_cate: Không tìm thấy danh mục
   user_not_admin: Đăng nhập tài khoản admin
+  update_order_failed: Cập nhật thất bại
+  not_found_order: Không tìm thấy đơn hàng
