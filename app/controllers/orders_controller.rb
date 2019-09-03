@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   before_action :check_cart, only: :create
-  before_action :user_login?, only: :index
   before_action :load_order, :is_cancel?, only: :update
 
   def index
