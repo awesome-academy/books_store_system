@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
   before_action :check_cart, only: :create
   before_action :user_login?, only: :index
+  before_action :load_order, :is_cancel?, only: :update
 
   def index
-    @orders = current_user.orders.create_desc
+    @orders = current_user.orders.preload(order_products: :product).create_desc
   end
 
   def create
@@ -13,10 +14,19 @@ class OrdersController < ApplicationController
       update_product
       session[:cart].clear
       flash[:success] = t "order_success"
+      redirect_to orders_path
     else
       flash[:danger] = t "order_failse"
+      redirect_to carts_path
     end
-    redirect_to carts_path
+  end
+
+  def update
+    @order.cancel!
+    respond_to(&:js)
+  rescue StandardError
+    flash[:danger] = t "update_order_failed"
+    redirect_to orders_path
   end
 
   private
@@ -56,5 +66,18 @@ class OrdersController < ApplicationController
         redirect_to root_url
       end
     end
+  end
+
+  def load_order
+    return if @order = Order.find_by(id: params[:id])
+    flash[:danger] = t "not_found_order"
+    redirect_to orders_path
+  end
+
+  def is_cancel?
+    return if params[:status].eql? "cancel"
+
+    flash[:danger] = t "not_found_order"
+    redirect_to orders_path
   end
 end

@@ -21,6 +21,12 @@ en:
               blank: Description can't be blank
             picture:
               blank: Picture can't be blank
+    attributes:
+      order:
+        deliver_status:
+          processing: Processing
+          cancel: Cancel
+          success: Success
   admin:
     categories:
       new:
@@ -55,6 +61,14 @@ en:
       myorder: My order
     order:
       details: Details
+      cancel_order: Cancel order
+      see_details: See details
+      image: Image
+      name: Name
+      number: Number
+      amount: Amount
+      close: Close
+      you_sure: You sure ?
   layouts:
     header:
       tim: Search
@@ -184,3 +198,5 @@ en:
   cart_empty: Cart is empty !
   not_found_cate: Not found category
   user_not_admin: User not Admin
+  update_order_failed: Update failed !
+  not_found_order: Not found order !

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :products, only: :show
     resources :reviews, only: %i(new create)
     resources :carts, only: %i(index create update destroy)
-    resources :orders, only: %i(create index)
+    resources :orders, only: %i(create index update)
     resources :categories, only: :show
     get "/search", to: "search_products#search"
     get "/newproduct", to: "newproducts#index"
