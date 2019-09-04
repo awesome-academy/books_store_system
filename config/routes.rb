@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
-    devise_for :users, controllers: {registrations: "users/registrations", session: "users/sessions"}
+
+    mount RailsAdmin::Engine => "/admin", as: "rails_admin"
+    devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions"}
     resources :users, only: :show
     resources :products, only: :show
     resources :reviews, only: %i(new create)
@@ -12,10 +14,5 @@ Rails.application.routes.draw do
     get "/search", to: "search_products#search"
     get "/newproduct", to: "newproducts#index"
     get "/topsale", to: "topsales#index"
-    namespace :admin do
-      root "/admin#index"
-      resources :categories, only: %i(new create)
-      resources :products, only: %i(new create)
-    end
   end
 end

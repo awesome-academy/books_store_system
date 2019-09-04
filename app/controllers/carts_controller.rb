@@ -4,7 +4,7 @@ class CartsController < ApplicationController
   before_action :load_item, only: %i(update destroy)
 
   def index
-    @order = current_user.orders.build if logged_in?
+    @order = current_user.orders.build if user_signed_in?
   end
 
   def create

@@ -65,7 +65,7 @@
           </div>
           <div class="content collapse1" id="content">
             <p>
-              <%= @product.description %>
+              <%= @product.description.html_safe %>
             </p>
           </div>
           <div class="viewmore" onclick="viewmore()" id="viewmore">
@@ -74,7 +74,7 @@
         </div> <!-- het gioi thieu sach -->
       </div> <!-- het content-detail -->
     </div>
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <%= render "form_review" %>
     <% end %>
     <div id="comment_id">
