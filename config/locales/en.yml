@@ -125,6 +125,7 @@ en:
       create: Create account
     show:
       logout: Logout
+      edit_profile: Edit Profile
   products:
     show:
       home: Home
@@ -179,6 +180,67 @@ en:
   newproduct:
     index:
       new_book: Sách mới
+  devise:
+    sessions:
+      new:
+        title: Log in
+        email: Email
+        password: Password
+        remember_me: Remember me
+        submit: Log in
+    registrations:
+      new:
+        title: Sign up
+        name: Name
+        email: Email
+        password: Password
+        password_confirm: Password Confirmation
+        sign_up: Sign up
+        character_min: Characters minimum
+      edit:
+        title: Edit Profile
+        email: Email
+        name: Name
+        phone: Phone
+        address: Address
+        password: Password
+        password_confirm: Password Confirmation
+        current_password: Current Password
+        update: Update
+        need_currentpass: we need your current password to confirm your changes
+        leave_blank: leave blank if you don't want to change it
+        character_min: Characters minimum
+        waiting_confirm: Currently waiting confirmation for
+    passwords:
+      new:
+        title: Forgot your password?
+        email: Email
+        send: Send to email
+      edit:
+        title: Change your password
+        new_password: New Password
+        confirm_new_password: Confirm new password
+        change_my_password: Change password
+        character_min: Characters minimum
+    mailer:
+      reset_password_instructions:
+        hello: Hello
+        request: Someone has requested a link to change your password
+        change_my_pass: Change my password
+      confirmation_intructions:
+        welcome: Welcome
+        you_can_confirm: You can confirm your account email through the link below
+        confirm_my_account: Confirm my account
+    confirmations:
+      new:
+        title: Resend confirmation instruction
+        email: Email
+        resend_to_email: Resend to email
+    shared:
+      links:
+        log_in: Log in
+        sign_up: Sign up
+        forgot_password: Forgot password ?
   signup_suc: Account was create!
   danger: Signup failse
   invalid: Invalid email/password combination

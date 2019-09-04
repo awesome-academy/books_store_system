@@ -19,7 +19,7 @@
         </div> <!-- het input -->
         <div class="col-md-3">
           <div class="login">
-            <% if logged_in? %>
+            <% if user_signed_in? %>
               <div class="user_name">
                 <%= current_user.name %>
                 <ul class="drop_user">
@@ -27,12 +27,12 @@
                   <li><%= link_to t(".my_order"), orders_path %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to t(".logout"), logout_path, method: :delete %>
+                    <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
                   </li>
                 </ul>
               </div>
             <% else %>
-              <%= link_to login_path do %>
+              <%= link_to user_session_path do %>
                 <i class="fa fa-user"></i>
                 <span><%= t ".login" %></span>
               <% end %>

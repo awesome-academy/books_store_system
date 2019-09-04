@@ -31,3 +31,4 @@ factories:
     pass_length: 6
   reviews:
     rate: 3
+num_top: 10

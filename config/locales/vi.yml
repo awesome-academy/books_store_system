@@ -125,6 +125,7 @@ vi:
       create: Tạo tài khoản
     show:
       logout: Đăng xuất
+      edit_profile: Cập nhật thông tin
   products:
     show:
       home: Trang chủ
@@ -179,6 +180,67 @@ vi:
   newproduct:
     index:
       new_book: New Book
+  devise:
+    sessions:
+      new:
+        title: Đăng nhập
+        email: Email
+        password: Mật khẩu
+        remember_me: Nhớ tài khoản
+        submit: Đăng nhập
+    registrations:
+      new:
+        title: Đăng ký
+        name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirm: Xác nhận mật khẩu
+        sign_up: Đăng ký
+        character_min: ký tự tối thiểu
+      edit:
+        title: Cập nhật thông tin
+        email: Email
+        name: Tên
+        phone: Số điện thoại
+        address: Địa chỉ
+        password: Mật khẩu
+        password_confirm: Xác nhận mật khẩu
+        current_password: Mật khẩu hiện tại
+        update: Cập nhật
+        need_currentpass: nhập mật khẩu hiện tại để xác nhận
+        leave_blank: để trống nếu không đổi mật khẩu
+        character_min: ký tự tối thiểu
+        waiting_confirm: Hiện đang chờ xác nhận
+    passwords:
+      new:
+        title: Quên mật khẩu ?
+        email: Email
+        send: Gửi đến email
+      edit:
+        title: Thay đổi mật khẩu
+        new_password: Mật khẩu mới
+        confirm_new_password: Xác nhận mật khẩu mới
+        change_my_password: Đổi mật khẩu
+        character_min: ký tự tối thiểu
+    mailer:
+      reset_password_instructions:
+        hello: Xin chào
+        request: Ai đó đã yêu cầu đổi mật khẩu
+        change_my_pass: Đổi mật khẩu
+      confirmation_intructions:
+        welcome: Xin chào
+        you_can_confirm: Chọn liên kết bên dưới để kích hoạt
+        confirm_my_account: Xác nhận tài khoản
+    confirmations:
+      new:
+        title: Gửi lại xác nhận tài khoản
+        email: Email
+        resend_to_email: Gửi lại email
+    shared:
+      links:
+        log_in: Đăng nhập
+        sign_up: Đăng ký
+        forgot_password: Quên mật khẩu
   signup_suc: Đăng ký thành công!
   danger: Đăng ký thất bại!
   invalid: Email hoặc mật khẩu không đúng
