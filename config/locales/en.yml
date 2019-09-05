@@ -23,10 +23,9 @@ en:
               blank: Picture can't be blank
     attributes:
       order:
-        deliver_status:
-          processing: Processing
-          cancel: Cancel
-          success: Success
+        processing: Processing
+        cancel: Cancel
+        success: Success
   admin:
     categories:
       new:
@@ -262,3 +261,4 @@ en:
   user_not_admin: User not Admin
   update_order_failed: Update failed !
   not_found_order: Not found order !
+  welcome_admin: Welcome to admin page !

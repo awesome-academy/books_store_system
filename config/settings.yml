@@ -32,3 +32,4 @@ factories:
   reviews:
     rate: 3
 num_top: 10
+min_op: 0

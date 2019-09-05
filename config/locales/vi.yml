@@ -23,10 +23,9 @@ vi:
               blank: Hình ảnh không thể trống
     attributes:
       order:
-        deliver_status:
-          processing: Đang giao hàng
-          cancel: Đã hủy
-          success: Giao hàng thành công
+        processing: Đang giao hàng
+        cancel: Đã hủy
+        success: Giao hàng thành công
   admin:
     categories:
       new:
@@ -262,3 +261,4 @@ vi:
   user_not_admin: Đăng nhập tài khoản admin
   update_order_failed: Cập nhật thất bại
   not_found_order: Không tìm thấy đơn hàng
+  welcome_admin: Chào mừng đến với trang quản lý
