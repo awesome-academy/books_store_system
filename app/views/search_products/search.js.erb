@@ -1,2 +1,6 @@
-  $("#show-search-product").removeClass('d_none');
-  $("#show-search-product").html('<%= j render "search_result" %>');
+  $('#show-search-product').removeClass('d_none');
+<% if @products.any? %>
+  $('#show-search-product').html('<%= j render "search_result" %>');
+<% else %>
+  $('#show-search-product').html('<%= t "not_found_product" %>');
+<% end %>

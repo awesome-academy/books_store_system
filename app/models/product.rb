@@ -25,5 +25,4 @@ class Product < ApplicationRecord
     joins(:order_products).group(:product_id)
       .order(Arel.sql("count(order_products.id) DESC")).limit(Settings.paginate)
   end)
-  scope :search, ->(search){where "title like ?", "%#{search}%"}
 end

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :load_parent_category
+  before_action :ransack
   protect_from_forgery with: :exception
   include CartsHelper
 
@@ -35,5 +36,9 @@ class ApplicationController < ActionController::Base
     return if @parent_category = Category.parent_category
     flash[:danger] = t "not_found_cate"
     redirect_to root_url
+  end
+
+  def ransack
+    @q = Product.ransack(params[:q])
   end
 end

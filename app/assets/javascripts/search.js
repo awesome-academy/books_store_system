@@ -3,7 +3,9 @@ function searchProduct(value){
     type: 'get',
     url: '/search',
     data: {
-        search_keyword: value
+        q: {
+        title_or_author_name_cont_any: value
+        }
     },
     dataType: 'script'
   })
@@ -11,7 +13,7 @@ function searchProduct(value){
 document.addEventListener('turbolinks:load', function () {
   $('#search').on('keyup', function(){
     let search = $(this).val();
-    if(search.length > 1){
+    if(search.length > 2){
       searchProduct(search);
     }
     else {
