@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :category
   has_many :reviews
   has_many :order_products
@@ -25,5 +28,8 @@ class Product < ApplicationRecord
     joins(:order_products).group(:product_id)
       .order(Arel.sql("count(order_products.id) DESC")).limit(Settings.paginate)
   end)
-  scope :search, ->(search){where "title like ?", "%#{search}%"}
+
+  def should_generate_new_friendly_id?
+    title_changed? || super
+  end
 end

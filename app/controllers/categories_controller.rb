@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
   private
 
   def load_category
-    return if @category = Category.find_by(id: params[:id])
+    return if @category = Category.find_by(slug: params[:id])
     flash[:danger] = t "not_found_cate"
     redirect_to root_url
   end

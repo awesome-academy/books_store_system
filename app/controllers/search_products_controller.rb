@@ -1,6 +1,7 @@
 class SearchProductsController < ApplicationController
   def search
-    @products = Product.search params[:search_keyword]
-    respond_to(&:js) if @products
+    @q = Product.ransack(params[:q])
+    @products = @q.result.limit Settings.search_result
+    respond_to(&:js)
   end
 end

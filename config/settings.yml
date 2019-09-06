@@ -33,3 +33,4 @@ factories:
     rate: 3
 num_top: 10
 min_op: 0
+search_result: 10
