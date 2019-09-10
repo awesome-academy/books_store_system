@@ -21,4 +21,16 @@ module CartsHelper
   def current_cart?
     current_cart.present?
   end
+
+  def user_name
+    return current_user.name if current_user
+  end
+
+  def user_phone
+    return current_user.phone if current_user.phone.present?
+  end
+
+  def user_address
+    return current_user.address if current_user.address.present?
+  end
 end

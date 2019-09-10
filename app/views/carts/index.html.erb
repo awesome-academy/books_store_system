@@ -24,7 +24,7 @@
           </tbody>
         </table>
         <div class="total_price">
-          <%= @total %>
+          <%= number_to_currency @total, locale: params[:locale] %>
         </div>
         <div class="total_price_name">
           <%= t ".total_price" %>:

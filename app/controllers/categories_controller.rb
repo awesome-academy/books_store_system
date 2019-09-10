@@ -3,7 +3,8 @@ class CategoriesController < ApplicationController
 
   def show
     @products = Product.by_category(@category)
-                       .page(params[:page]).per Settings.paginate
+                    .page(params[:page]).per Settings.paginate
+    store_location
   end
 
   private

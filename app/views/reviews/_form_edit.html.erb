@@ -1,0 +1,21 @@
+<%= form_for @review, method: :patch, remote: true do |f| %>
+  <div class="form_edit">
+    <%= render "shared/error_messages", object: f.object %>
+    <%= f.label t(".rate") %>
+    <span class="rating">
+      <% for i in Settings.rate %>
+        <% if i <= @review.rate.to_i %>
+          <i class="fa fa-star active" data-rate="<%= i %>"></i>
+        <% else %>
+          <i class="fa fa-star" data-rate="<%= i %>"></i>
+        <% end %>
+      <% end %>
+      <%= f.hidden_field :rate %>
+      <%= f.hidden_field :product_id, value: @review.product_id %>
+    </span>
+    <div class="form-group">
+      <%= f.text_area :content, class: "form-control content-form", placeholder: t(".comment"), required: true %>
+      <%= f.submit t(".submit"), class: "btn btn-primary btn_custom" %>
+    </div>
+  </div>
+<% end %>

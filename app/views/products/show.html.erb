@@ -50,10 +50,12 @@
               <p><i class=" fa fa-check"></i><span><%= t ".free_plastic" %></span></p>
               <p><i class=" fa fa-check"></i><span><%= t ".free_ship" %></span></p>
               <p><i class=" fa fa-check"></i><span><%= t ".free_ship2" %></span></p>
-              <p><%= @reviews.size %><%= t ".rate" %></p>
-              <% if @reviews.size.positive? %>
-                <p><%= t ".average" %><%= average_star %> <i class="fa fa-star active"></i></p>
-              <% end %>
+              <p class="review_size"><%= @reviews.size %> <%= t ".rate" %></p>
+              <p class="review_rate">
+                <% if @reviews.size.positive? %>
+                  <%= t ".average" %>: <%= average_star %> <i class="fa fa-star active"></i>
+                <% end %>
+              </p>
             </div> <!-- het intro -->
           </div> <!-- het produce-infor -->
         </div> <!-- het right -->
@@ -75,7 +77,9 @@
       </div> <!-- het content-detail -->
     </div>
     <% if user_signed_in? %>
-      <%= render "form_review" %>
+      <div class="form_review">
+        <%= render "form_review" %>
+      </div>
     <% end %>
     <div id="comment_id">
       <% if @reviews %>

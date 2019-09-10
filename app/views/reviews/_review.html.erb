@@ -1,4 +1,4 @@
-<div class="wrap-comment">
+<div class="wrap-comment" id="<%= review.id %>">
   <span class="user"><%= review.user.name %></span>
   <span class="rated">
     <% review.rate.to_i.times do %>
@@ -9,4 +9,14 @@
     <% end %>
   </span>
   <p class="comment-content"><%= review.content %></p>
+  <% if can? :update, review %>
+    <div class="action">
+      <%= link_to edit_review_path(review), remote: true do %>
+        <i class="fas fa-pencil-alt"></i> <%= t ".edit" %>
+      <% end %>
+      <%= link_to review, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
+        <i class="fas fa-trash"></i> <%= t ".delete" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

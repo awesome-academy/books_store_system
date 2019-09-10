@@ -26,9 +26,9 @@ end
                         publisher_name: Faker::Book.publisher,
                         author_name: Faker::Book.author,
                         num_exist: rand(1..50),
-                        price: rand(10000...100000),
+                        price: rand(20000...200000),
                         remote_picture_url: "https://loremflickr.com/800/500/book",
-                        description: Faker::Lorem.paragraph
+                        description: Faker::Lorem.paragraphs
   )
 end
 User.create(name: "Admin", email: "admin@gmail.com", password: "123123", role: 1)

@@ -11,13 +11,7 @@ function searchProduct(value){
   })
 }
 document.addEventListener('turbolinks:load', function () {
-  $('#search').on('keyup', function(){
-    let search = $(this).val();
-    if(search.length > 2){
-      searchProduct(search);
-    }
-    else {
-      $('#show-search-product').addClass('d_none')
-    }
+  $('#search').on('click', function(){
+    $('.option').addClass('d_block');
   })
 })

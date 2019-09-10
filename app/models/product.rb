@@ -25,7 +25,10 @@ class Product < ApplicationRecord
     where(category_id: Category.childs_category(id))
   end)
   scope :top_sale, (lambda do
-    joins(:order_products).group(:product_id)
+    joins(:order_products)
+      .where("order_products.created_at between '
+        #{Date.today.beginning_of_month}' and '#{Date.today}'")
+      .group(:product_id)
       .order(Arel.sql("count(order_products.id) DESC")).limit(Settings.paginate)
   end)
 

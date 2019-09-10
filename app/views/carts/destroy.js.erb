@@ -2,3 +2,4 @@ $('.total_price').html( '<div class= "total_price"><%= @total_price %></div>');
 $('.cart_delete').bind('ajax:success', function() {
    $(this).closest('tr').fadeOut();
 });
+$('#cart_size').html('<span id="cart_size">(<%= @cart_size %>)</span>');

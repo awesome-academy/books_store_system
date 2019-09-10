@@ -28,15 +28,15 @@ function topFunction() {
   $(document).scrollTop(0);
 }
 
-$(document).on('click', '.rating .fa-star', function () {
+$(document).on('click', '.fa-star', function () {
   let rate = $(this).attr('data-rate');
-  let star_dom = $('.rating .fa-star');
+  let star_dom = $(this).parent().find('.fa-star');
   star_dom.removeClass('active');
   for (let i = 0; i < rate; i++) {
     star_dom.eq(i).addClass('active');
   }
 
-  $('#review_rate').val(rate);
+  $(this).parent().find('#review_rate').val(rate);
 });
 
 
@@ -56,26 +56,29 @@ document.addEventListener('turbolinks:load', function () {
   if (href == url || href == url1 || href == url2) {
     list.addClass('d_block');
   }
+  $('.alert').fadeOut(3000);
+  // $('.alert-success').fadeOut(3000);
+  // $('.alert-danger').fadeOut(3000);
 })
 
 function nextslide() {
   var ile = $('#slideshows');
   var tmp = parseInt(ile.css('left'));
-  var re = tmp - 230 + 'px';
+  var re = tmp - 233 + 'px';
   ile.css('left', re);
-  if (tmp < - 230 * 5) {
+  if (tmp < - 233 * 5) {
     ile.css('left', '5px');
   }
 }
 
-setInterval(nextslide, 5000);
+// setInterval(nextslide, 6000);
 
 function prevslide() {
   var ile = $('#slideshows');
   var tmp = parseInt(ile.css('left'));
-  var re = tmp + 230 + 'px';
+  var re = tmp + 233 + 'px';
   ile.css('left', re);
-  if (tmp > -230) {
+  if (tmp > -233) {
     ile.css('left', '5px');
   }
 }

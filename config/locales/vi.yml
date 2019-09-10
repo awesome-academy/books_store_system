@@ -144,6 +144,18 @@ vi:
       rate: Đánh giá
       comment: Thêm bình luận
       submit: Gửi
+  reviews:
+    form:
+      rate: Đánh giá
+      comment: Thêm bình luận
+      submit: Gửi
+    form_edit:
+      rate: Đánh giá
+      submit: Cập nhật
+    review:
+      edit: Sửa
+      delete: Xóa
+      you_sure: Bạn chắc xóa ?
   carts:
     index:
       cart: Giỏ hàng
@@ -262,3 +274,6 @@ vi:
   update_order_failed: Cập nhật thất bại
   not_found_order: Không tìm thấy đơn hàng
   welcome_admin: Chào mừng đến với trang quản lý
+  review_fails: Đánh giá thất bại
+  update_fail: Cập nhật thất bại
+  not_found_review: Không tìm thấy đánh giá

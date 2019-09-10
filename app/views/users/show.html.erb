@@ -1,1 +1,10 @@
-<%= link_to t(".edit_profile"),  edit_user_registration_path %>
+<div class="clear"></div>
+<div class="row">
+  <h1><%= current_user.name %></h1>
+  <%= current_user.email %></br>
+  <%= current_user.address %></br>
+  <%= current_user.phone %>
+</div>
+  <div class="edit"">
+    <%= link_to t(".edit_profile"),  edit_user_registration_path %>
+  </div>

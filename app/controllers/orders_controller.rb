@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :check_cart, only: :create
   before_action :load_order, :is_cancel?, only: :update
@@ -36,7 +37,7 @@ class OrdersController < ApplicationController
   end
 
   def check_cart
-    return unless current_cart.empty?
+    return if current_cart && !current_cart.empty?
     flash[:danger] = t "cart_empty"
     redirect_to carts_path
   end
