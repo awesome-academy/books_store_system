@@ -10,10 +10,9 @@
           </div> <!-- het logo -->
         </div>
         <div class="col-md-6" id="search-form">
-          <form>
-            <input type="text" name="seach" id="search" class="form-control timkiem">
-            <span class="search"><%= t ".tim" %></span>
-          </form>
+          <%= search_form_for @q, url: search_path, remote: true do |f| %>
+            <%= f.search_field :title_cont_any, class:"form-control timkiem", id: "search" %>
+          <% end %>
           <div class="list-group d_none" id="show-search-product">
           </div>
         </div> <!-- het input -->
