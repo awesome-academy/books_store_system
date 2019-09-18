@@ -3,13 +3,14 @@ class CategoriesController < ApplicationController
 
   def show
     @products = Product.by_category(@category)
-                       .page(params[:page]).per Settings.paginate
+                    .page(params[:page]).per Settings.paginate
+    store_location
   end
 
   private
 
   def load_category
-    return if @category = Category.find_by(id: params[:id])
+    return if @category = Category.find_by(slug: params[:id])
     flash[:danger] = t "not_found_cate"
     redirect_to root_url
   end

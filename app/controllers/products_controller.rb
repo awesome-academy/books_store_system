@@ -3,5 +3,6 @@ class ProductsController < ApplicationController
 
   def show
     @reviews = @product.reviews.create_desc
+    store_location
   end
 end

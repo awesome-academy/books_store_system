@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :category
   has_many :reviews
   has_many :order_products
@@ -22,8 +25,14 @@ class Product < ApplicationRecord
     where(category_id: Category.childs_category(id))
   end)
   scope :top_sale, (lambda do
-    joins(:order_products).group(:product_id)
+    joins(:order_products)
+      .where("order_products.created_at between '
+        #{Date.today.beginning_of_month}' and '#{Date.today}'")
+      .group(:product_id)
       .order(Arel.sql("count(order_products.id) DESC")).limit(Settings.paginate)
   end)
-  scope :search, ->(search){where "title like ?", "%#{search}%"}
+
+  def should_generate_new_friendly_id?
+    title_changed? || super
+  end
 end

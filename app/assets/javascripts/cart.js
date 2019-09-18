@@ -14,7 +14,7 @@ $(document).on('change', '.number_custom1', function(){
   let price = $(this).parents().siblings('.price').html();
   let num = $(this).val();
   let id = $(this).parents().siblings('.id').html()
-  let total = price * num;
+  let total = (price * num).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   update_cart(id, num);
   $(this).parents().siblings('.total').html(total);
 })

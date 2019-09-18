@@ -5,6 +5,7 @@ class CartsController < ApplicationController
 
   def index
     @order = current_user.orders.build if user_signed_in?
+    store_location
   end
 
   def create
@@ -24,6 +25,7 @@ class CartsController < ApplicationController
   def destroy
     session[:cart].delete params[:id]
     @total_price = total_cart
+    @cart_size = cart_size
     respond_to do |format|
       format.js
     end

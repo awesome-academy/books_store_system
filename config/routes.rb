@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions"}
     resources :users, only: :show
     resources :products, only: :show
-    resources :reviews, only: %i(new create)
+    resources :reviews
     resources :carts, only: %i(index create update destroy)
     resources :orders, only: %i(create index update)
     resources :categories, only: :show

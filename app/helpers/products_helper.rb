@@ -18,4 +18,8 @@ module ProductsHelper
     end
     (total / num).round(Settings.round_helper)
   end
+
+  def review_size
+    @reviews.size
+  end
 end

@@ -144,6 +144,18 @@ en:
       rate: Rate
       comment: Comments
       submit: Submit
+  reviews:
+    form:
+      rate: Rate
+      comment: Comments
+      submit: Submit
+    form_edit:
+      rate: Rate
+      submit: Update
+    review:
+      edit: Edit
+      delete: Delete
+      you_sure: You sure ?
   carts:
     index:
       cart: Cart
@@ -262,3 +274,6 @@ en:
   update_order_failed: Update failed !
   not_found_order: Not found order !
   welcome_admin: Welcome to admin page !
+  review_fails: Create review fail
+  update_fail: Update review fail
+  not_found_review: Not found review

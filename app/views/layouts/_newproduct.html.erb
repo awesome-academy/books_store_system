@@ -2,7 +2,7 @@
   <div class="floor1">
     <div class="title">
       <h2>
-        <p class="titlechild"><%= t ".new_book" %></p>
+        <p class="titlechild"><%= link_to t(".new_book"), newproduct_path %></p>
         <%= link_to t(".seeall"), newproduct_path, class: "seeall" %>
       </h2>
     </div> <!-- het title -->
@@ -18,6 +18,15 @@
                   <%= link_to product do %>
                     <%= image_tag product.picture.url %>
                   <% end %>
+                  <div class="add_cart">
+                    <%= form_with url: carts_path  do |f| %>
+                      <%= f.hidden_field :quantity, value: 1 %>
+                      <%= f.hidden_field :id, value: product.id %>
+                      <%= f.button class:"btn" do %>
+                        <i class="fas fa-shopping-cart"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
                 </div>
                 <div class="productname">
                   <%= link_to product.title, product %>

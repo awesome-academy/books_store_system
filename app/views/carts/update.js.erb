@@ -1,1 +1,1 @@
-$('.total_price').html( '<div class= "total_price"><%= @total_price %></div>');
+$('.total_price').html( '<div class= "total_price"><%= number_to_currency @total_price, locale: params[:locale] %></div>');

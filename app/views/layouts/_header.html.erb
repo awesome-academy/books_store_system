@@ -10,10 +10,27 @@
           </div> <!-- het logo -->
         </div>
         <div class="col-md-6" id="search-form">
-          <form>
-            <input type="text" name="seach" id="search" class="form-control timkiem">
-            <span class="search"><%= t ".tim" %></span>
-          </form>
+          <%= search_form_for @q, url: search_path, remote: true do |f| %>
+            <%= f.search_field :title_cont_any, class:"form-control timkiem",
+              id: "search", autocomplete: "off", placeholder: "Search by title" %>
+            <div class="option">
+              <div class="row">
+                <div class="col-md-3">
+                  <%= f.label "price from:" %>
+                </div>
+                <div class="col-md-4">
+                  <%= f.search_field :price_gteq %>
+                </div>
+                <div class="col-md-1">
+                  <%= f.label "to:" %>
+                </div>
+                <div class="col-md-4">
+                  <%= f.search_field :price_lteq %>
+                </div>
+              </div>
+            </div>
+            <%= f.submit "Search", class: "btn_search" %>
+          <% end %>
           <div class="list-group d_none" id="show-search-product">
           </div>
         </div> <!-- het input -->
@@ -57,10 +74,9 @@
               </div>
             <span><%= t ".cart" %></span>
               <% if current_cart.present? %>
-                <span>(<%= cart_size %>)</span>
+                <span id="cart_size">(<%= cart_size %>)</span>
               <% end %>
             </span>
-            <i class="fa fa-sort-down"></i>
             <% end %>
           </div>
         </div> <!-- het login,gio hang -->
@@ -79,13 +95,15 @@
       </div>
       <div class="col-md-7">
       </div>
-      <div class="col-md-2">
-        <%= link_to locale: "en" do %>
-          <%= image_tag "us.png", class: "flag" %>
-        <% end %>
-        <%= link_to locale: "vi" do %>
-        <%= image_tag "vn.png", class: "flag" %>
-        <% end %>
+      <div class="languagee">
+        <div class="dropdown language">
+          <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+            <i class="fas fa-globe-europe"></i> Language<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Tiếng việt", locale: "vi" %></li>
+            <li><%= link_to "English", locale: "en" %></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

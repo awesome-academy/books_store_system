@@ -1,2 +1,4 @@
 $('<%= j (render @review) %>').prependTo('#comment_id');
 $('#review_content').val('');
+$('.review_size').html('<p class="review_size"><%= @review_size %><%= t ".rate" %></p>');
+$('.review_rate').html('<p class="review_rate"><%= t ".average" %><%= @review_rate %><i class="fa fa-star active"></p>')

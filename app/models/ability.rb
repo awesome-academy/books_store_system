@@ -2,16 +2,16 @@ class Ability
   include CanCan::Ability
 
   def initialize user
+    user ||= User.new
+
     if user.admin?
       can :access, :rails_admin
       can :read, :dashboard
       can :manage, :all
-    elsif user.customer?
-      can :read, :all
-      can :manage, :review, user_id: user.id
-      can :update, :order, user_id: user.id
     else
-      can :read, :all
+      can :manage, Review, user_id: user.id
+      can :manage, Order, user_id: user.id
+      can [:read, :update], User, id: user.id
     end
   end
 end

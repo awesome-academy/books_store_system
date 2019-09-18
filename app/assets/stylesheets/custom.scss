@@ -16,12 +16,26 @@
       }
     }
     .timkiem{
-      width: 68%;
+      width: 77%;
       height: 30px;
       margin-top: 7px;
       margin-bottom: -9px;
       display: inline-block;
       position: relative;
+    }
+    .option{
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      width: 73%;
+      height: 30px;
+      background: $white;
+      display: none;
+      .row{
+        input{
+          width: 100%;
+        }
+      }
     }
     .search{
       background-color: $color10;
@@ -133,11 +147,14 @@
   .bottom-header{
     background-color: $color10;
     height: 30px;
-    .flag{
-      width: 20%;
-      margin-left: 10px;
+    .language{
       float: right;
-      z-index:1000;
+      button{
+        border: none;
+        outline: none;
+        background-color: $white_rose;
+        padding-top: 6px;
+      }
     }
     .menu{
       width: 19%;
@@ -316,6 +333,20 @@
     background-color: $yellowgreen;
   }
 }
+.btn_search{
+  width: 60px;
+  background-color: #f2f2f2;
+  color: $green;
+  border: none;
+  border-radius: 2px;
+  transition: 0.3s;
+  height: 29px;
+  font-size: 15px;
+  margin-left: -3px;
+  &:hover{
+    // background-color: $yellowgreen;
+  }
+}
 .form_custom{
   width: 200px;
 }
@@ -485,6 +516,16 @@
   margin-bottom: 10px;
 }
 .wrap-comment {
+  background: $white_rose;
+  margin-bottom: 20px;
+  width: 50%;
+  position: relative;
+  .action{
+    position: absolute;
+    top: 92%;
+    left: 82%;
+    background: $white_rose;
+  }
   span.user {
     font-size: 18px;
     color: $blue;
@@ -581,23 +622,23 @@ td{
   .title {
     width: 100%;
     height: 38px;
-    background-color: #f2f2f2;
-    .titlechild{
+    background-color: $color10;
+    .titlechild a{
       display: block;
       float: left;
-      color: white;
-      width: 98px;
+      color: $white;
+      width: 120px;
       height: 100%;
-      background-color: #00cc66;
-      font-size: 20px;
+      background-color: $green;
+      font-size: 18px;
       line-height: 38px;
-      padding-left: 7px;
+      padding-left: 4px;
       font-family: serif;
       font-weight:600;
     }
     .seeall{
       float: right;
-      color:black;
+      color:$black;
       font-family: serif;
       font-weight:700;
       font-size: 15px;
@@ -605,7 +646,7 @@ td{
       line-height:38px;
       padding-right:10px;
       &:hover{
-        color: #00cc66;
+        color: $green;
         text-decoration: none;
       }
     }
@@ -630,7 +671,7 @@ td{
       margin-left: 5px;
       .oneproduct{
         width: 155px;
-        background: #FFF;
+        background: $white;
         padding: 0 5px;
         margin: 10px auto;
         .products {
@@ -641,6 +682,27 @@ td{
             height: 182px;
             overflow: hidden;
             transition: 0.3s;
+            position: relative;
+            .add_cart{
+              position: absolute;
+              top: 50%;
+              left: 30%;
+              display: none;
+              button{
+                border: none;
+                outline: none;
+                background: $white;
+              }
+              i{
+                color: $green;
+                font-size: 15px;
+              }
+            }
+            &:hover{
+              .add_cart{
+                display: block;
+              }
+            }
             img{
               width: 100%;
               height: 100%;
@@ -654,15 +716,15 @@ td{
             margin-top: 10px;
             cursor: pointer;
             a{
-              color: black;
+              color: $black;
               transition: 0.2s;
               font-weight: 500;
-              height:40px;
+              height: 35px;
               display: block;
               overflow: hidden;
               text-transform: uppercase;
               &:hover{
-                color: #00cc66;
+                color: $green;
                 text-decoration: none;
              }
             }
@@ -686,7 +748,7 @@ td{
       background: none;
       &:hover{
         i{
-        color: #00cc66;
+        color: $green;
         }
       }
     }
@@ -697,7 +759,7 @@ td{
       width: 20px;
       height: 30px;
       display: block;
-      color: black;
+      color: $black;
     }
     .nextbtn {
       position: absolute;
@@ -706,7 +768,7 @@ td{
       width: 20px;
       height: 30px;
       display: block;
-      color: black;
+      color: $black;
     }
   }
 }
@@ -731,7 +793,7 @@ td{
         margin-left: 5px;
         .oneproduct{
           width: 155px;
-          background: #FFF;
+          background: $white;
           padding: 0 5px;
           margin: 10px auto;
           .products {
@@ -742,6 +804,27 @@ td{
               height: 182px;
               overflow: hidden;
               transition: 0.3s;
+              position: relative;
+              .add_cart{
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                display: none;
+                button{
+                  border: none;
+                  outline: none;
+                  background: $white;
+                }
+                i{
+                  color: $green;
+                  font-size: 15px;
+                }
+              }
+              &:hover{
+                .add_cart{
+                  display: block;
+                }
+             }
               img{
                 width: 100%;
                 height: 100%;
@@ -758,12 +841,12 @@ td{
                 color: black;
                 transition: 0.2s;
                 font-weight: 500;
-                height:40px;
+                height: 35px;
                 display: block;
                 overflow: hidden;
                 text-transform: uppercase;
                 &:hover{
-                  color: #00cc66;
+                  color: $green;
                   text-decoration: none;
               }
               }
@@ -796,14 +879,14 @@ td{
 #show-search-product {
   z-index: 2;
   background: white;
-  width: 64.5%;
+  width: 72.8%;
   position: absolute;
   // display: none;
 }
 
 #show-search-product .small-product {
   padding: 1%;
-  border-bottom: 1px solid ghostwhite;
+  border-bottom: 1px solid $white;
   &:hover{
     background-color: $color12;
   }
@@ -817,7 +900,7 @@ td{
 #show-search-product .info {
   padding: 0px;
   margin: 0;
-  color: black;
+  color: $black;
 }
 
 #show-search-product .info span {
@@ -852,4 +935,8 @@ td{
   &:hover{
     background-color: $color2;
   }
+}
+.languagee{
+  width: 17%;
+  float: left;
 }

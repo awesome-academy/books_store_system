@@ -3,19 +3,15 @@ function searchProduct(value){
     type: 'get',
     url: '/search',
     data: {
-        search_keyword: value
+        q: {
+        title_or_author_name_cont_any: value
+        }
     },
     dataType: 'script'
   })
 }
 document.addEventListener('turbolinks:load', function () {
-  $('#search').on('keyup', function(){
-    let search = $(this).val();
-    if(search.length > 1){
-      searchProduct(search);
-    }
-    else {
-      $('#show-search-product').addClass('d_none')
-    }
+  $('#search').on('click', function(){
+    $('.option').addClass('d_block');
   })
 })

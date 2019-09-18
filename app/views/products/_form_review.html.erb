@@ -9,7 +9,7 @@
   </span>
   <%= f.hidden_field :product_id, value: @product.id %>
   <div class="form-group" >
-    <%= f.text_field :content, class: "form-control content-form", placeholder: t(".comment"), required: true %>
+    <%= f.text_area :content, class: "form-control content-form", placeholder: t(".comment"), required: true %>
     <%= f.submit t(".submit"), class: "btn btn-primary btn_custom" %>
   </div>
 <% end %>
